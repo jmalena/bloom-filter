@@ -4,5 +4,6 @@ node_js:
   - "5"
   - "6"
 scripts:
+  - npm run check:lint
   - npm run check:flow
   - npm run build
