@@ -1,5 +1,11 @@
 {
+  "name": "@jmalena/bloom-filter",
+  "version": "1.0.1",
+  "description": "Simple Bloom filter implementation",
   "main": "lib/bloom-filter.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "clean": "rm -rf lib",
     "test": "ava --verbose",
@@ -8,6 +14,14 @@
     "build": "babel src --out-dir lib",
     "prepublish": "npm run clean && npm run check:lint && npm run check:flow && npm test && npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmalena/bloom-filter"
+  },
+  "keywords": [
+    "data structure",
+    "bloom filter"
+  ],
   "dependencies": {
     "murmurhash-native": "~3.2.0"
   },
