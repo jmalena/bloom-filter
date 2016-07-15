@@ -6,9 +6,19 @@ Bloom filter is a space-efficient data structure, which can test whether an elem
 
 [![Build Status](https://travis-ci.org/jmalena/bloom-filter.svg?branch=master)](https://travis-ci.org/jmalena/bloom-filter)
 
+## Installation
+
+To install latest stable version:
+
+```
+npm install @jmalena/bloom-filter --save
+```
+
 ## Example
 
 ```js
+import BloomFilter from '@jmalena/bloom-filter'
+
 const filter = new BloomFilter(65536, 2)
 
 filter.add('redrum')
