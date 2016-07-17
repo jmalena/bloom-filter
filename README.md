@@ -29,7 +29,10 @@ filter.containsMaybe('otrozone') // false: "otrozone" is definitely not in a set
 
 ## API
 
-### `BloomFilter(length, hashCount)`
+### `BloomFilter(length, hashCount[, hashFn1[, hashFn2]])`
+
+Custom hash function must take string as input and return unsigned 32-bit integer as output. It's highly recommended to `hashFn1` and `hashFn2` be different hash functions.
+
 ### `BloomFilter.add(str)`
 ### `BloomFilter.containsMaybe(str)`
 
