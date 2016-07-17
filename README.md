@@ -1,6 +1,6 @@
 # Bloom filter
 
-Simple Bloom filter implementation.
+Simple and dependency-free Bloom filter implementation.
 
 Bloom filter is a space-efficient data structure, which can test whether an element is not or is probably a member of a set.
 

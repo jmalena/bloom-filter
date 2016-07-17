@@ -1,7 +1,7 @@
 {
   "name": "@jmalena/bloom-filter",
   "version": "1.0.1",
-  "description": "Simple Bloom filter implementation",
+  "description": "Simple and dependency-free Bloom filter implementation",
   "main": "lib/bloom-filter.js",
   "files": [
     "lib"
@@ -22,9 +22,6 @@
     "data structure",
     "bloom filter"
   ],
-  "dependencies": {
-    "murmurhash-native": "~3.2.0"
-  },
   "devDependencies": {
     "ava": "~0.15.2",
     "babel-cli": "~6.10.1",

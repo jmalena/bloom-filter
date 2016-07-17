@@ -1,7 +1,8 @@
 /* @flow */
 
-import {murmurHash32} from 'murmurhash-native'
 import Storage from './storage'
+import fnv32 from './hash/fnv32'
+import fnv32a from './hash/fnv32a'
 
 export default class {
   storage: Storage;
@@ -16,20 +17,22 @@ export default class {
     this.hashCount = hashCount
   }
 
-  getHash (str: string, seed: number) {
-    return murmurHash32(str, seed) % this.storage.length
-  }
-
   add (str: string) {
+    const hash1 = fnv32(str)
+    const hash2 = fnv32a(str)
+
     for (let i = 0; i < this.hashCount; i++) {
-      const hash = this.getHash(str, i)
+      const hash = (hash1 + i * hash2) % this.storage.length
       this.storage.add(hash)
     }
   }
 
   containsMaybe (str: string) {
+    const hash1 = fnv32(str)
+    const hash2 = fnv32a(str)
+
     for (let i = 0; i < this.hashCount; i++) {
-      const hash = this.getHash(str, i)
+      const hash = (hash1 + i * hash2) % this.storage.length
 
       if (!this.storage.contains(hash)) {
         return false
