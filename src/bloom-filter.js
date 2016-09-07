@@ -13,8 +13,8 @@ export default class {
   hashFn2: hashFn;
 
   constructor (length: number, hashCount: number, hashFn1: hashFn = fnv32, hashFn2: hashFn = fnv32a) {
-    if (length > Math.pow(2, 32)) { // not enough hashs
-      throw new RangeError('Maximum length is ' + Math.pow(2, 32))
+    if (length > Math.pow(2, 32)) {
+      throw new RangeError('Not enought hashs for ' + length + ' bit length, use smaller value up to ' + Math.pow(2, 32))
     }
 
     this.storage = new Storage(length)
