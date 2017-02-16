@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rm -rf lib",
     "test": "jest --verbose",
-    "check:lint": "eslint src test",
+    "check:lint": "eslint src",
     "check:flow": "flow check",
     "build": "babel src --out-dir lib",
     "prepublish": "npm run clean && npm run check:lint && npm run check:flow && npm test && npm run build"
