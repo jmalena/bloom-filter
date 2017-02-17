@@ -1,4 +1,3 @@
-import {check, gen} from 'jest-check'
 import fnv32a from '../fnv32a'
 
 check.it('is unsigned 32-bit integer', [gen.string], (str) => {

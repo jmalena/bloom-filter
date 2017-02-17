@@ -1,4 +1,3 @@
-import {check, gen} from 'jest-check'
 import fnv32 from '../fnv32'
 
 it('hash', () => {

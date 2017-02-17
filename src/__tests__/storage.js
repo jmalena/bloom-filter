@@ -1,4 +1,3 @@
-import {check, gen} from 'jest-check'
 import Storage from '../storage'
 
 const length = Math.pow(2, 8)

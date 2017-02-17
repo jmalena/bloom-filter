@@ -1,4 +1,3 @@
-import {check, gen} from 'jest-check'
 import BloomFilter from '../bloom-filter'
 
 const length = Math.pow(2, 8)
